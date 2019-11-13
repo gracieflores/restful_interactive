@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  
+    
+    <h1>{{title}}</h1>
+    <button (click)="onButtonClick()" >GET ALL TASKS</button>
+    <ul>
+      <li *ngFor="let t of tasks">{{t.title}}  <button (click)="onButtonClickEvent(t._id)">Show</button></li>
+    </ul>
+
+    <div *ngIf="task">
+      <p>{{task.data.title}}</p>
+      <p>{{task.data.description}}</p>
+    </div>
+    
+    
+    
+
+    
+<router-outlet></router-outlet>
+</div>
